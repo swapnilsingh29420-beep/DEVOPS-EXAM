@@ -1,0 +1,20 @@
+name: Build appliaction
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install g++
+        run: sudo apt update && sudo apt install -y g++
+
+      - name: Compile C++ program
+        run: g++ main.cpp -o app
+
+      - name: Run program
+        run: ./app
