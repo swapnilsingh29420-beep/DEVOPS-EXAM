@@ -14,7 +14,7 @@ jobs:
         run: sudo apt update && sudo apt install -y g++
 
       - name: Compile C++ program
-        run: g++ main.cpp -o app
+        run: g++ hello.cpp -o hello
 
       - name: Run program
-        run: ./app
+        run: ./hello
